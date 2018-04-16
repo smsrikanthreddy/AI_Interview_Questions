@@ -1,0 +1,28 @@
+
+Understanding Chi-Square Test
+
+Chi square test is used to do the feature selection in machine learning.
+
+Suppose there are N instances and two classes i.e. positive and negative. Given a feature X, we can use chi square test to evaluate its importance to distinguish the class.
+
+By calculating the chi square scores for all the features, we can rank the features by the chi square scores, then choose the top ranked features for model training.
+
+To use chi-square test for feature selection, we calculate chi-square between each feature and the target and select the desired number of featuress with the best chi square scores.
+
+The intuition is that if a feature is independent to the target it is uninformative for classifying observations.
+
+
+Understand Chi Square Test
+Chi Square Test is used in statistics to test the independence of two events.  Given dataset about two events, we can get the observed count O and the expected count E.  Chi Square Score measures how much the expected counts E and observed Count O derivate from each other.
+
+In feature selection, the two events are occurrence of the feature and occurrence of the class.
+
+In other words, we want to test whether the occurrence of a specific feature and the occurrence of a specific class are independent. 
+
+If the two events are dependent, we can use the occurrence of the feature to predict the occurrence of the class. We aim to select the features, of which the occurrence is highly dependent on the occurrence of the class. 
+
+When the two events are independent,  the observed count is close to the expected count, thus a small chi square score. So a high value of \chi^2 indicates that the hypothesis of independence is incorrect. In other words, the higher value of the \chi^2 score, the more likelihood the feature is correlated with the class, thus it should be selected for model training.
+
+
+Reference:-
+1. http://www.learn4master.com/machine-learning/chi-square-test-for-feature-selection

@@ -1,0 +1,21 @@
+Analysis Of VAriance (ANOVA)
+
+Variance - Variance gives a measure of how the data distributes itself about the mean or expected value.
+
+Anova is a statistical test which is used to compare the mean of more than two groups.
+
+Under this test we have two competing claims:
+
+Null hypothesis: All the groups have the same mean.
+
+Alternate hypothesis : There is atleast one group whose mean is different from the others.
+
+ANOVA test only tells whether there is difference between the groups or not . It doesn't specify which groups are different from the rest.
+
+This test is named ANOVA i.e. Analysis of variance because we use variances to arrive at the final conclusion.
+
+
+Analysis of variance (ANOVA) is a collection of statistical models used to analyze the differences among group means and their associated procedures (such as "variation" among and between groups). In the ANOVA setting, the observed variance in a particular variable is partitioned into components attributable to different sources of variation. In its simplest form, ANOVA provides a statistical test of whether or not the means of several groups are equal, and therefore generalizes the t-test to more than two groups. ANOVAs are useful for comparing (testing) three or more means (groups or variables) for statistical significance. It is conceptually similar to multiple two-sample t-tests, but is less conservative (results in less type I error) and is therefore suited to a wide range of practical problems.
+
+ANOVA's null hypothesis is whether group mean values of the dependent variable are not significantly different, while an alternative hypothesis is just that at least one of the factor level forms a group of observations which mean value is different from overall mean. ANOVA does not specify which of the factor levels are significant discriminators.
+
