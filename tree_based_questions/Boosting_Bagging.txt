@@ -11,28 +11,33 @@ How it works,
 
 Bagging allows replacement in bootstrapped sample
 
-Baggin is good for reducing variance as we would learn multiple classifiers and average them
+Bagging is good for reducing variance as we would learn multiple classifiers and average them
 
 
 2. What is Boosting?
 Boosting is one of the ensemble methods and also meta learners.
 Boosting builds the new learner in a sequential way.
-Boosting assigns weights to each classifier is trained. Suppose it trained 10 classifiers, it assigns more weight to classifiers which gave good results than the weak classifiers. So in the end all the classifiers are averages or majority voting is done for final predictions.
 
-Steps:
-1. Draw a random subset of training samples d1 without replacement from the training set D to train a initial weak classifier C1
-2.Draw second random training subset d2 without replacement from the training set and add 50 percent of the samples that were previously falsely classified/misclassified to train a weak learner C2
-Find the training samples d3 in the training set D on which C1 and C2 disagree to train a third weak learner C3
-Combine all the weak learners via majority voting.
+Boosting is also kind of bagging but it varies slightly. 
+Boosting is where each classifier puts greater weight on the previous classifier's errors, the cases that it couldn't categorize well and 
+boosts the effect of this error for the next classifier to improve.
 
-Some of the Boosting techniques include an extra-condition to keep or discard a single learner. For example, in AdaBoost, the most renowned, an error less than 50% is required to maintain the model; otherwise, the iteration is repeated until achieving a learner better than a random guess.
+Boosting, on the other hand, uses all data to train each learner, but instances that were misclassified by the previous learners are given 
+more weight so that subsequent learners give more focus to them during training.
+
+Some of the Boosting techniques include an extra-condition to keep or discard a single learner. For example, in AdaBoost, the most renowned, 
+an error less than 50% is required to maintain the model; otherwise, the iteration is repeated until achieving a learner better than a random
+guess.
 
 Which is the best, Bagging or Boosting?
-There’s not an outright winner; it depends on the data, the simulation and the circumstances.
-Bagging and Boosting decrease the variance of your single estimate as they combine several estimates from different models. So the result may be a model with higher stability.
+There’s not an outright winner, it depends on the data, the simulation and the circumstances.
+Bagging and Boosting decrease the variance of your single estimate as they combine several estimates from different models. So the result may
+be a model with higher stability.
 
-If the problem is that the single model gets a very low performance, Bagging will rarely get a better bias. However, Boosting could generate a combined model with lower errors as it optimises the advantages and reduces pitfalls of the single model.
+If the problem is that the single model gets a very low performance, Bagging will rarely get a better bias. However, Boosting could generate 
+a combined model with lower errors as it optimises the advantages and reduces pitfalls of the single model.
 
-By contrast, if the difficulty of the single model is over-fitting, then Bagging is the best option. Boosting for its part doesn’t help to avoid over-fitting; in fact, this technique is faced with this problem itself. For this reason, Bagging is effective more often than Boosting.
+By contrast, if the difficulty of the single model is over-fitting, then Bagging is the best option. Boosting for its part doesn’t help to
+avoid over-fitting; in fact, this technique is faced with this problem itself. For this reason, Bagging is effective more often than Boosting.
 
 
