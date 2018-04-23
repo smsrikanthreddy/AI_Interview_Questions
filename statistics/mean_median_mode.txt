@@ -1,0 +1,38 @@
+1. Mean
+mean is the average i.e. sum of all the numbers divided by the no of numbers
+
+
+2. Median
+Median is the middle element of the numbers which is ordered in ascending to descending
+
+3. Mode
+mode is the frequently occurring element in the list
+
+ex:-1) Find the mean, median, mode, and range for the following list of values:
+13, 18, 13, 14, 13, 16, 14, 21, 13
+
+Ans)
+
+Mean :-
+The mean is the usual average, so I'll add and then divide:
+
+(13 + 18 + 13 + 14 + 13 + 16 + 14 + 21 + 13) ÷ 9 = 15
+
+Median :-
+The median is the middle value, so first I'll have to rewrite the list in numerical order:
+
+13, 13, 13, 13, 14, 14, 16, 18, 21 (odd number)
+
+There are nine numbers in the list, so the middle one will be the (9 + 1) ÷ 2 = 10 ÷ 2 = 5th number i.e. 14
+
+. Arrange the data points from smallest to largest.
+. If the number of data points is odd, the median is the middle data point in the list.
+. If the number of data points is even, the median is the average of the two middle data points in the list.
+
+Mode :-
+The mode is the number that is repeated more often than any other, so 13 is the mode.
+
+The mode is the most commonly occurring data point in a dataset. The mode is useful when there are a lot of repeated values in a dataset. There can be no mode, one mode, or multiple modes in a dataset.
+
+
+
