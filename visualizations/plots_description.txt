@@ -1,0 +1,19 @@
+Histogram:-
+
+To make a histogram, divide up the axis into bins (sometimes called “classes”) and make a rectangle for each bin whose height is proportional
+to the number of data points in the bin. These are devilishly hard to make by hand, and they look somewhat different depending on your choice 
+of bin size and position. But for large numbers of data points, they give you a clear idea about the shape of a distribution.
+
+ A histogram looks like a bar graph except that the bars are adjacent, that is, there's no space between them.
+
+Barplot:-
+
+A bar chart shows the distribution of categorical data. All of our examples above were of numerical, quantitative data: the numbers have a 
+place on a number line, and they have an inherent order. They are also continuous; it’s possible to be 163.47 cm tall or 34.5 years old.
+
+
+Boxplot:-
+
+A box plot is a visual picture of a distribution using the five-number summary: the minimum, the first quartile (a.k.a. Q1), the median, the 
+third quartile (Q3) and the maximum. Because they are simple diagrams, students can make box plots by hand. Box plots are particularly good 
+for comparing two distributions: when students see two or more box plots in parallel, they can easily see the differences between groups.
