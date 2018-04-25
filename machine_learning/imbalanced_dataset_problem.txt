@@ -1,0 +1,98 @@
+Handling Imbalanced dataset
+
+This is one of the most common issue in machine learning, mainly in binary classification problems. Most of the new machine learning practitionars
+donot know how to tackle this problem or even do not know such a problem at all.
+
+There are lot many methods to deal with imbalanced dataset problems but we deal with only these below as of now.
+    1. Undersampling
+    2. Oversampling
+    3. Synthetic Data Generation
+    4. Cost Sensitive Learning
+
+1. Undersampling:-
+
+his method works with majority class. It reduces the number of observations from majority class to make the data set balanced. This method is 
+best to use when the data set is huge and reducing the number of training samples helps to improve run time and storage troubles.
+
+Undersampling methods are of 2 types: Random and Informative.
+
+Random undersampling method randomly chooses observations from majority class which are eliminated until the data set gets balanced. 
+Informative undersampling follows a pre-specified selection criterion to remove the observations from majority class.
+
+Within informative undersampling, EasyEnsemble and BalanceCascade algorithms are known to produce good results. These algorithms are easy to
+ understand and straightforward too.
+
+EasyEnsemble: At first, it extracts several subsets of independent sample (with replacement) from majority class. Then, it develops multiple 
+classifiers based on combination of each subset with minority class. As you see, it works just like a unsupervised learning algorithm.
+
+BalanceCascade: It takes a supervised learning approach where it develops an ensemble of classifier and systematically selects which majority
+ class to ensemble.
+
+Do you see any problem with undersampling methods? Apparently, removing observations may cause the training data to lose important information
+pertaining to majority class.
+
+2. Oversampling:-
+
+This method works with minority class. It replicates the observations from minority class to balance the data. It is also known as upsampling. 
+Similar to undersampling, this method also can be divided into two types: Random Oversampling and Informative Oversampling.
+
+Random oversampling balances the data by randomly oversampling the minority class. Informative oversampling uses a pre-specified criterion 
+and synthetically generates minority class observations.
+
+An advantage of using this method is that it leads to no information loss. The disadvantage of using this method is that, since oversampling
+simply adds replicated observations in original data set, it ends up adding multiple observations of several types, thus leading to 
+overfitting. Although, the training accuracy of such data set will be high, but the accuracy on unseen data will be worse.
+
+3. Synthetic Data Generation
+
+In simple words, instead of replicating and adding the observations from the minority class, it overcome imbalances by generates artificial 
+data. It is also a type of oversampling technique.
+
+In regards to synthetic data generation, synthetic minority oversampling technique (SMOTE) is a powerful and widely used method. SMOTE 
+algorithm creates artificial data based on feature space (rather than data space) similarities from minority samples. We can also say, it 
+generates a random set of minority class observations to shift the classifier learning bias towards minority class.
+
+To generate artificial data, it uses bootstrapping and k-nearest neighbors. Precisely, it works this way:
+
+1. Take the difference between the feature vector (sample) under consideration and its nearest neighbor.
+2. Multiply this difference by a random number between 0 and 1
+3. Add it to the feature vector under consideration
+4. This causes the selection of a random point along the line segment between two specific features
+
+4. Cost Sensitive Learning (CSL)
+
+It is another commonly used method to handle classification problems with imbalanced data. It’s an interesting method. In simple words, this 
+method evaluates the cost associated with misclassifying observations.
+
+It does not create balanced data distribution. Instead, it highlights the imbalanced learning problem by using cost matrices which describes 
+the cost for misclassification in a particular scenario. Recent researches have shown that cost sensitive learning have many a times 
+outperformed sampling methods. Therefore, this method provides likely alternative to sampling methods.
+
+Let’s understand it using an interesting example: A data set of passengers in given. We are interested to know if a person has bomb. The data 
+set contains all the necessary information. A person carrying bomb is labeled as positive class. And, a person not carrying a bomb in labeled
+ as negative class. The problem is to identify which class a person belongs to. Now, understand the cost matrix.
+
+There in no cost associated with identifying a person with bomb as positive and a person without negative. Right ? But, the cost associated 
+with identifying a person with bomb as negative (False Negative) is much more dangerous than identifying a person without bomb as positive 
+(False Positive).
+
+Cost Matrix is similar of confusion matrix. It’s just, we are here more concerned about false positives and false negatives (shown below). 
+There is no cost penalty associated with True Positive and True Negatives as they are correctly identified.
+
+The goal of this method is to choose a classifier with lowest total cost.
+
+Total Cost = C(FN)xFN + C(FP)xFP
+
+where,
+
+FN is the number of positive observations wrongly predicted
+FP is the number of negative examples wrongly predicted
+C(FN) and C(FP) corresponds to the costs associated with False Negative and False Positive respectively. Remember, C(FN) > C(FP).
+There are other advanced methods as well for balancing imbalanced data sets. These are Cluster based sampling, adaptive synthetic sampling, 
+border line SMOTE, SMOTEboost, DataBoost – IM, kernel based methods and many more. The basic working on these algorithm is almost similar as 
+explained above. There are more intuitive methods which you can try for improved predictions:
+
+1. Using clustering, divide the majority class into K distinct cluster. There should be no overlap of observations among these clusters. Train 
+each of these cluster with all observations from minority class. Finally, average your final prediction.
+2. Collect more data. Aim for more data having higher proportion of minority class. Otherwise, adding more data will not improve the proportion
+of class imbalance.
