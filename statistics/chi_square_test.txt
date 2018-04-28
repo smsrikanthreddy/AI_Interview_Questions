@@ -3,7 +3,7 @@ Understanding Chi-Square Test
 
 Chi square test is used to do the feature selection in machine learning.
 
-Suppose there are N instances and two classes i.e. positive and negative. Given a feature X, we can use chi square test to evaluate its importance to distinguish the class.
+Suppose there are N instances and two classes i.e. positive and negative. Given a feature X, we can use chi square test to<br> evaluate its importance to distinguish the class.
 
 By calculating the chi square scores for all the features, we can rank the features by the chi square scores, then choose the top ranked features for model training.
 
